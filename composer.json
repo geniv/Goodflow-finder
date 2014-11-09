@@ -13,5 +13,8 @@
 		"psr-0": {
 			"Goodflow": ""
 		}
+	},
+	"require": {
+		"nette/finder": "2.3.*@dev"
 	}
 }
