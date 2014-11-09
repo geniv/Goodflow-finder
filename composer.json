@@ -1,6 +1,7 @@
 {
 	"name": "geniv/goodflow",
 	"description": "Addons for WebLoader",
+	"version": "1.0.0",
 	"keywords": ["webloader", "nette"],
 	"homepage": "http://addons.nette.org/cs/webloader",
 	"license": "MIT",
@@ -15,6 +16,6 @@
 		}
 	},
 	"require": {
-		"nette/finder": "2.3.*@dev"
+		"nette/finder": "~2.2@dev"
 	}
 }
