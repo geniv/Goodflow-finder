@@ -6,7 +6,7 @@
  *
  */
 
-namespace Geniv\Goodflow;
+namespace Goodflow;
 
 /**
  * hlavni trida s nejpouzivanenejsimi statickymi metodami
@@ -18,7 +18,7 @@ namespace Geniv\Goodflow;
  */
 abstract class Core {
 
-    public function getBasePath(Nette\Http\Request $request) {
+    public function getBasePath(\Nette\Http\Request $request) {
         return rtrim($request->getUrl()->getBasePath(), '/');
     }
 }

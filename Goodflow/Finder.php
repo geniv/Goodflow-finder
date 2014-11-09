@@ -6,7 +6,7 @@
  *
  */
 
-namespace Geniv\Goodflow;
+namespace Goodflow;
 
 /**
  * rozsireni API finderu o moznost razeni
