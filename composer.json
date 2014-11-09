@@ -16,6 +16,6 @@
 		}
 	},
 	"require": {
-		"nette/finder": "~2.2@dev"
+		"nette/finder": "2.3.*@dev"
 	}
 }
