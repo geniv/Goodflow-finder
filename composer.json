@@ -1,9 +1,9 @@
 {
 	"name": "geniv/goodflow",
-	"description": "Addons for WebLoader",
+	"description": "Addons for WebLoader and more",
+	"version": "1.0.4",
 	"keywords": ["webloader", "nette"],
-	"homepage": "http://addons.nette.org/cs/webloader",
-	"license": "MIT",
+	"license": "WTFPL",
 	"authors": [
 		{
 			"name": "Radek Frystak"
