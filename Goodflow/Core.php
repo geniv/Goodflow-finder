@@ -786,13 +786,13 @@ abstract class Core {
      * @return int pocet smazanych polozek
      */
     public static function cleanExpire($list, $time) {
-      $posun = strtotime('-' . $time); // zaporny posun
-      $ret = array_map(function($r) use ($posun) {
-          if (file_exists($r) && filemtime($r) < $posun) {
-            return unlink($r);
-          }
+        $posun = strtotime('-' . $time); // zaporny posun
+        $ret = array_map(function($r) use ($posun) {
+            if (file_exists($r) && filemtime($r) < $posun) {
+                return unlink($r);
+            }
         }, $list);
-      return array_sum($ret);
+        return array_sum($ret);
     }
 
 
@@ -823,11 +823,30 @@ abstract class Core {
      * @return void
      */
     public static function checkDependency($paths) {
-      foreach ($paths as $i => $v) {
-        if (!file_exists($v)) {
-          throw new ExceptionCore('dependency ' . $i . ' is broken!');
+        foreach ($paths as $i => $v) {
+            if (!file_exists($v)) {
+                throw new ExceptionCore('dependency ' . $i . ' is broken!');
+            }
         }
-      }
+    }
+
+
+    /**
+     * kontrola datumu v rozsahu
+     * @param  [type]  $from  od
+     * @param  [type]  $to    do
+     * @param  [type]  $value now
+     * @return boolean        [description]
+     */
+    public static function isDateInRange($from, $to, $value = null)
+    {
+        $d1 = new \DateTime($from);
+        $d2 = new \DateTime($to);
+        $now = new \DateTime($value);
+        if ($from && $to) {
+            return \Nette\Utils\Validators::isInRange($now, array($d1, $d2));
+        }
+        return false;
     }
 }
 
